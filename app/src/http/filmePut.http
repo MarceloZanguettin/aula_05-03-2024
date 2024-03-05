@@ -1,0 +1,7 @@
+PUT http://localhost:8080/filmes/1
+Content-Type: application/json
+
+{
+  "titulo": "Filme Editado",
+  "sinopse": "Teste de PUT"
+}

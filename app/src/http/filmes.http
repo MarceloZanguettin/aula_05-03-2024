@@ -1,0 +1,7 @@
+POST http://localhost:8080/filme
+Content-Type: application/json
+
+{
+  "titulo": "Novo Filme 3",
+  "sinopse": "Teste de POST"
+}
