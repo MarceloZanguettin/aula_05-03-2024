@@ -4,6 +4,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -14,6 +16,10 @@ public class Filme {
   private Long id;
   private String titulo;
   private String sinopse;
+
+  @ManyToOne
+  @JoinColumn(name = "id_diretor")
+  private Diretor diretor;
 
   public Long getId() {
     return id;
@@ -38,4 +44,13 @@ public class Filme {
   public void setSinopse(String sinopse) {
     this.sinopse = sinopse;
   }
+
+  public Diretor getDiretor() {
+    return diretor;
+  }
+
+  public void setDiretor(Diretor diretor) {
+    this.diretor = diretor;
+  }
+
 }
