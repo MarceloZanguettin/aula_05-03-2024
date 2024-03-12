@@ -1,5 +1,6 @@
 package application.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -20,6 +21,9 @@ public class Filme {
   @ManyToOne
   @JoinColumn(name = "id_diretor")
   private Diretor diretor;
+
+  @Column(name = "id_diretor")
+  private Long idDiretor;
 
   public Long getId() {
     return id;
@@ -51,6 +55,14 @@ public class Filme {
 
   public void setDiretor(Diretor diretor) {
     this.diretor = diretor;
+  }
+
+  public Long getIdDiretor() {
+    return idDiretor;
+  }
+
+  public void setIdDiretor(Long idDiretor) {
+    this.idDiretor = idDiretor;
   }
 
 }

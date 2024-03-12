@@ -2,5 +2,5 @@ POST http://localhost:8080/diretores
 Content-Type: application/json
 
 {
-  "nome": "Novo Diretor"
+  "nome": "Novo Diretor 4"
 }
